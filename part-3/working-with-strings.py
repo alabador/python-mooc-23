@@ -84,3 +84,29 @@ print("*"*30)
 
 
 ################################################################
+
+### Find all Substrings ###
+
+#print out all substrings which are at least three characters long, 
+# which begin with the char specified by the user. You can assume the
+# input string is at least three chars long.
+
+# Please type in a word: mammoth
+# Please type in a character: m
+# mam
+# mmo
+# mot
+
+word = input("word")
+char = input("char")
+
+while True:
+    index = word.find(char)
+    if len(word) - index > 2 and index >= 0:
+        print(word[index:index+3])
+        word = word[index+1:]
+    else:
+        break
+
+
+####################################################################
