@@ -110,3 +110,22 @@ while True:
 
 
 ####################################################################
+
+### The second occurrence ###
+
+# Find the second occurence of a substring. If there is no second (or first) occurrence,
+# the program should print out a message accordingly.
+
+word = input("word")
+substring = input("sub")
+
+index = word.find(substring)
+second_index = word.find(substring, index + len(substring))
+
+if second_index < 0: 
+    print("The substring does not occur twice in the string.")
+else:
+    print(f"The second occurrence of the substring is at index {second_index}.")
+
+
+######################################################################
