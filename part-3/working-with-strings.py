@@ -129,3 +129,25 @@ else:
 
 
 ######################################################################
+
+### First Letters of Words ###
+
+sentence = input("sentence here")
+
+# Easy solution with methods
+split = sentence.split()
+for i in split:
+    print(i[0])
+
+# No methods, pure loops and conditionals
+# find all spaces, then get item after that.
+
+print(sentence[0])
+index_space = sentence.find(' ')
+while index_space > 0:
+    print(sentence[index_space + 1])
+    sentence = sentence[index_space + 1 :]
+    index_space = sentence.find(' ')
+
+
+#####################################################################
