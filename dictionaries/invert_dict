@@ -1,0 +1,5 @@
+def invert(dictionary: dict):
+    copy = dictionary.copy()
+    dictionary.clear()
+    for key in copy:
+        dictionary[copy[key]] = key 
