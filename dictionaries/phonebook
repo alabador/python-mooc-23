@@ -1,0 +1,23 @@
+phonebook = {
+
+}
+
+while True:
+    command = input("command(1 search, 2 add, 3 quit): ")
+    if command == "1":
+        find_name = input("name:")
+        if find_name in phonebook:
+            print(phonebook[find_name])
+        else:
+            print("no number")
+    elif command == "2":
+        insert_name = input("name:")
+        insert_number = input("number:")
+        phonebook[insert_name] = insert_number
+        print("ok!")  
+    elif command == "3":
+        break
+    else:
+        print("Invalid command, try again.")
+
+print("quitting...")
